@@ -20,6 +20,16 @@ spring:
           initial-size: 5                                       # 初始化连接数
           max-total: 5                                          # 最大连接数
           max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+#动态刷新配置 ---需要忽略权限拦截(springboot1.x)
+management:
+  security:
+    enabled: false
+
 mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml
     typeAliasesPackage: com.atguigu.springcloud.entities
