@@ -8,7 +8,7 @@ server:
 spring:
     profiles: dev
     application:
-        name: microservicecloud-config-dept-client
+        name: microservicecloud-config-provider-client8001
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
         driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
@@ -25,11 +25,6 @@ spring:
         port: 5672
         username: guest
         password: guest
-#动态刷新配置 ---需要忽略权限拦截(springboot1.x)
-management:
-  security:
-    enabled: false
-
 mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml
     typeAliasesPackage: com.atguigu.springcloud.entities
@@ -37,7 +32,7 @@ mybatis:
 eureka:
     client:
         service-url:
-            defaultZone: http://eureka7001.com:7001/eureka/
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
             
  
 ---
@@ -46,7 +41,7 @@ server:
 spring:
     profiles: test
     application:
-        name: microservicecloud-config-dept-client
+        name: microservicecloud-config-provider-client8001
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
         driver-class-name: com.mysql.cj.jdbc.Driver             # mysql驱动包
@@ -65,4 +60,4 @@ mybatis:
 eureka:
     client:
         service-url:
-            defaultZone: http://eureka7001.com:7001/eureka/
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
