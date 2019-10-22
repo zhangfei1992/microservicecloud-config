@@ -25,6 +25,10 @@ spring:
         port: 5672
         username: guest
         password: guest
+    cloud:
+        bus:
+            trace:
+                enabled: true
 mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml
     typeAliasesPackage: common.entities
