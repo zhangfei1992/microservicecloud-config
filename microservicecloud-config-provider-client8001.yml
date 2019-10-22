@@ -37,7 +37,7 @@ management:
   endpoint:
     bus-refresh:
       enabled: true
-            
+test: 123
  
 ---
 server:
