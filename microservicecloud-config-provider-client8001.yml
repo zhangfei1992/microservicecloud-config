@@ -27,7 +27,7 @@ spring:
         password: guest
 mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml
-    typeAliasesPackage: com.atguigu.springcloud.entities
+    typeAliasesPackage: common.entities
     mapperLocations: classpath:mybatis/mapper/*.xml
 eureka:
     client:
@@ -55,7 +55,7 @@ spring:
           max-wait-millis: 200                                  # 等待连接获取的最大超时时间
 mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml
-    typeAliasesPackage: com.atguigu.springcloud.entities
+    typeAliasesPackage:  common.entities
     mapperLocations: classpath:mybatis/mapper/*.xml
 eureka:
     client:
