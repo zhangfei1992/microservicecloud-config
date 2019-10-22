@@ -8,11 +8,11 @@ server:
 spring:
     profiles: dev
     application:
-        name: microservicecloud-config-provider-client8001-dev-1
+        name: microservicecloud-config-provider-client8001-dev
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
         driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
-        url: jdbc:mysql://localhost:3306/testdb-wukong?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true         # 数据库名称
+        url: jdbc:mysql://localhost:3306/pdedu?useUnicode=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true         # 数据库名称
         username: root
         password: zhang1992
         dbcp2:
