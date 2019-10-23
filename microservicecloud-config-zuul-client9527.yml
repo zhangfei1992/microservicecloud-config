@@ -6,23 +6,23 @@ spring:
 server:
     port: 9527
 spring:
-  profiles: dev
-  application:
-    name: microservicecloud-config-zuul-client9527
-  cloud:
-    gateway:
-      routes:
-        - id: path_route
-          uri: http://localhost:8000
-          order: 0
-          predicates:
-            - Path=/**
-          filters:
-            - StripPrefix=1
-       discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
+    profiles: dev
+    application:
+        name: microservicecloud-config-zuul-client9527
+    cloud:
+        gateway:
+            routes:
+                - id: path_route
+                uri: http://localhost:8000
+            order: 0
+            predicates:
+                - Path=/**
+            filters:
+                - StripPrefix=1
+        discovery:
+            locator:
+                enabled: true
+                lowerCaseServiceId: true 
 eureka:
     client:
         service-url:
