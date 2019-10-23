@@ -33,6 +33,7 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: common.entities
+ test: 123
 ---
 server:
     port: 8001
