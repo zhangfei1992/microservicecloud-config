@@ -25,10 +25,10 @@ spring:
         port: 5672
         username: guest
         password: guest
-# mybatis:
+mybatis:
 #     config-location: classpath:mybatis/mybatis.cfg.xml
-#     typeAliasesPackage: common.entities
-#     mapperLocations: classpath:mybatis/mapper/*.xml
+    typeAliasesPackage: common.entities
+    mapperLocations: classpath:mybatis/mapper/*.xml
 eureka:
     client:
         service-url:
