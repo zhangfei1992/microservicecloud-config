@@ -12,7 +12,7 @@ spring:
     cloud:
         gateway:
             routes:
-                - id: path_route
+                id: path_route
                 uri: http://localhost:8000
             order: 0
             predicates:
