@@ -4,7 +4,7 @@ server:
 spring:
   profiles: dev
   application:
-    name: gateway
+    name: microservicecloud-config-zuul-client9527
   cloud:
     gateway:
       routes:
