@@ -14,13 +14,15 @@ eureka:
         service-url:
             defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
         healthcheck:
-          enabled: true #健康检查（需要spring-boot-starter-actuator依赖）
+            enabled: true #健康检查（需要spring-boot-starter-actuator依赖）
     instance:
         lease-expiration-duration-in-seconds: 10 # 续约更新时间间隔（默认30秒）
         lease-renewal-interval-in-seconds: 10 # 续约到期时间（默认90秒）
 zuul:
   routes:
-    mydept.serviceId: microservicecloud-config-provider-client
-    mydept.path: /dept/**
+    provider-server:
+        serviceId: microservicecloud-config-provider-client
+        path: /dept/**
+        strip-prefix: true
   ignored-services: "*"
   prefix: /api
