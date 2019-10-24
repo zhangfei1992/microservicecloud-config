@@ -20,9 +20,13 @@ eureka:
         lease-renewal-interval-in-seconds: 10 # 续约到期时间（默认90秒）
 zuul:
   routes:
-    provider-server:
-        serviceId: microservicecloud-config-provider-client
+    provider-server8001:
         path: /dept/**
         strip-prefix: true
+        url: http://provider8001:8001
+    provider-server8002:
+        path: /dept/**
+        strip-prefix: true
+        url: http://provider8002:8002    
   ignored-services: "*"
   prefix: /api
