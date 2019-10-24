@@ -9,6 +9,11 @@ spring:
     profiles: dev
     application:
         name: microservicecloud-config-zuul-client9527
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
 eureka:
     client:
         service-url:
@@ -18,6 +23,7 @@ eureka:
     instance:
         lease-expiration-duration-in-seconds: 10 # 续约更新时间间隔（默认30秒）
         lease-renewal-interval-in-seconds: 10 # 续约到期时间（默认90秒）
+      
 zuul:
   routes:
     provider-server8001:
