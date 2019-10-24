@@ -27,11 +27,11 @@ eureka:
 zuul:
   routes:
     provider-server8001:
-        path: /**
+        path: /dept1/**
         strip-prefix: true
         url: http://provider8001:8001
     provider-server8002:
-        path: /**
+        path: /dept2/**
         strip-prefix: true
         url: http://provider8002:8002    
   ignored-services: "*"
