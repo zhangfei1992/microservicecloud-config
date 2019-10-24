@@ -9,21 +9,18 @@ spring:
     profiles: dev
     application:
         name: microservicecloud-config-zuul-client9527
-    cloud:
-        gateway:
-            routes:
-                id: path_route
-                uri: http://localhost:8000
-            order: 0
-            predicates:
-                - Path=/**
-            filters:
-                - StripPrefix=1
-        discovery:
-            locator:
-                enabled: true
-                lowerCaseServiceId: true 
 eureka:
     client:
         service-url:
             defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+        healthcheck:
+          enabled: true #健康检查（需要spring-boot-starter-actuator依赖）
+    instance:
+        lease-expiration-duration-in-seconds: 10 # 续约更新时间间隔（默认30秒）
+        lease-renewal-interval-in-seconds: 10 # 续约到期时间（默认90秒）
+zuul:
+  routes:
+    mydept.serviceId: microservicecloud-config-provider-client
+    mydept.path: /dept/**
+  ignored-services: "*"
+  prefix: /api
