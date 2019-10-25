@@ -10,7 +10,7 @@ spring:
         username: guest
         password: guest
 turbine:
-  aggregator:
-    cluster-config: default
-  app-config: microservicecloud-config-provider-client
-  combine-host-port: true
+    aggregator:
+        cluster-config: default
+    app-config: microservicecloud-config-provider-client
+    combine-host-port: true
