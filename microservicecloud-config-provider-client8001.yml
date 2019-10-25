@@ -25,6 +25,8 @@ spring:
         port: 5672
         username: guest
         password: guest
+    zipkin:
+        base-url: http://zipkin-9003.com:9003
 eureka:
     client:
         service-url:

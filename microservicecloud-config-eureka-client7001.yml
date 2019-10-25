@@ -9,6 +9,8 @@ spring:
     profiles: dev
     application:
         name: microservicecloud-config-eureka-client7001
+    zipkin:
+        base-url: http://zipkin-9003.com:9003
 # eureka:
 #     instance: 
 #         hostname: eureka7001.com 
