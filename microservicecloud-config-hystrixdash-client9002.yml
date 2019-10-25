@@ -1,0 +1,16 @@
+server:
+	port: 9002
+spring:
+    profiles: dev
+    application:
+        name: microservicecloud-config-hystrixdash-client9002
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: microservicecloud-config-provider-client
+  combine-host-port: true
