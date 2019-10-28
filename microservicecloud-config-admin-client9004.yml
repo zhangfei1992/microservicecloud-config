@@ -1,0 +1,25 @@
+server:
+    port: 9004
+spring:
+    profiles: dev
+    application:
+        name: microservicecloud-config-zipkin-client9003
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+    zipkin:
+        base-url: http://zipkin-9003.com:9003
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
+  endpoint:
+    health:
+      show-details: always
