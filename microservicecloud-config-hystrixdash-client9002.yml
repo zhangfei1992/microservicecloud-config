@@ -14,7 +14,7 @@ spring:
     boot:
         admin:
           client:
-            url: http://localhost:9004
+            url: http://admin-9004.com:9004
 eureka:
   client:
     service-url:
