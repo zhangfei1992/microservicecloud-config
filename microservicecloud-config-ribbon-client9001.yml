@@ -8,6 +8,10 @@ spring:
       port: 5672
       username: guest
       password: guest    
+  boot:
+        admin:
+          client:
+            url: http://localhost:9004
 eureka:
   client:
     service-url:

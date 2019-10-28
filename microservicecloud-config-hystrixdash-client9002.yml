@@ -11,6 +11,10 @@ spring:
         password: guest
     zipkin:
         base-url: http://zipkin-9003.com:9003
+    boot:
+        admin:
+          client:
+            url: http://localhost:9004
 eureka:
   client:
     service-url:

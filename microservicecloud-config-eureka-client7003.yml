@@ -11,6 +11,10 @@ spring:
         name: microservicecloud-config-eureka-client7003
     zipkin:
         base-url: http://zipkin-9003.com:9003
+    boot:
+        admin:
+          client:
+            url: http://localhost:9004
 eureka: 
   instance:
     hostname: eureka7003.com #eureka服务端的实例名称(这里使用了虚拟主机映射，修改hosts文件即可实现)
